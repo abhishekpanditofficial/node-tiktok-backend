@@ -1,3 +1,5 @@
+import dotenv from 'dotenv'
+dotenv.config()
 import express from 'express'
 import mongoose from 'mongoose'
 import Data from './data.js'
@@ -20,7 +22,7 @@ app.use((req,res,next) => {
 
 
 //db config
-const connection_url= "mongo-db connection url";
+const connection_url= process.env.DATABASE_URL.replace('<PASSWORD>', process.env.DATABASE_PASSWORD);
 mongoose.connect(connection_url,{
    useNewUrlParser: true,
    useCreateIndex: true,
