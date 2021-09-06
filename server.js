@@ -20,7 +20,7 @@ app.use((req,res,next) => {
 
 
 //db config
-const connection_url= "mongodb+srv://abhi:abhi@tiktok@cluster0.j4lfi.mongodb.net/tiktok?retryWrites=true&w=majority";
+const connection_url= "mongo-db connection url";
 mongoose.connect(connection_url,{
    useNewUrlParser: true,
    useCreateIndex: true,
